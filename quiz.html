@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang= "en-BE">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  
+  <style>
+    
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    
+    body{
+      padding: 20px 10px;
+      font-family: "poppins", sans-serif;
+      font-weight: bold;
+    }
+    
+    header{
+      text-align: center;
+    }
+    
+    section{
+      margin-top: 40px;
+    }
+    
+    .container1{
+      margin-left: 10px;
+      
+    }
+    
+    .container2{
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+    }
+    
+    #submitBtn{
+      height: 40px;
+      font-size: 1em;
+      font-weight: bold;
+    }
+    
+    footer{
+      margin-top: 15em;
+      font-size: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h4>Belgium has three official language. Two of them are Dutch (Flemish) and French. What is the third official language?</h4>
+  </header>
+  
+  <section>
+    <div class="container1">
+      <input type="radio" name="#" id="x" >
+      <label for="radio">German</label>
+      <br> <br>
+      <input type="radio" name="#" id="y">
+      <label for="radio">Spanish</label>
+      <br> <br>
+      <input type="radio" name="#" id="z">
+      <label for="radio">Luxembourgish</label>
+      <br> <br>
+      <input type="radio" name="#" id="a">
+      <label for="radio">English</label>
+
+    </div>
+    <div class="container2">
+      <button id="submitBtn">SUBMIT</button>
+      <label id="userResult"></label>
+      <a href="quiz2.html">NEXT QUESTION</a>
+    </div>
+  </section>
+  <footer>
+    <a href="">Created By: Dryl Alderite Genita</a>
+  </footer>
+</body>
+
+  <script>
+    const x = document.getElementById("x")
+    
+    const y = document.getElementById("y")
+    
+    const z = document.getElementById("z")
+    
+    const a = document.getElementById("a")
+    
+    const submitBtn = document.getElementById("submitBtn")
+    
+    const result = document.getElementById("userResult")
+    
+    submitBtn.onclick = function() {
+      if(x.checked)
+      result.textContent = "YOU ARE CORRECT!";
+      
+      if(y.checked)
+      result.textContent = "YOU ARE WRONG!";
+      
+      if(z.checked)
+      result.textContent = "YOU ARE WRONG SORRY!";
+      
+      if(a.checked)
+      result.textContent = "WRONG ANSWER";
+    } 
+      
+  </script>
+
+</html>
